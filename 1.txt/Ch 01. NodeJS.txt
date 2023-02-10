@@ -1,0 +1,38 @@
+node.js 는 LTS 버전으로 사용하는 걸 권장함.
+node_modules : 패키지들의 폴더
+package-lock : 패키지의 의존정보 파일
+parcel은 번들러, 동작가능하게 해주는 모듈
+--save-dav(개발용, 앞이든 뒤든 상관없다.) 축약형 : -D
+dependencies : 의존성
+devDependencies : 개발의존성
+
+
+.gitignore : 버전관리무시 지정
+
+터미널 claer (윈도우) 터미널 지우기
+
+parcel 번들러
+package.json에 등록한 scripts 명령어를 실행시켜야 parcel이 작동.
+실행 명령은 npm run 명령어
+main.js를 연결시 type="module" 추가해줘야된다.
+자동으로 ts파일을 js파일로 변환이 가능하다.
+npm 명령에 따라 개발용 배포용으로 실행가능
+- parcel build ./경로 - 배포용 (난독화되어있음) (최종제품용)
+
+
+유의적 버전
+4.17.21 = major.minor.patch
+major = 기존버전과 호환 안됨. 새로운 버전 (ex.3버전과 호환 X)
+minor = 기존버전과 호환 가능. 기능이 추가된 버전 (ex. 16버전화 호환)
+patch = 기존 버전과 호환 가능. 버그 및 오타 등이 수정된 버전
+
+메이저버전 앞에 ^(케롯) 가지는 의미 : minor과 patch의 버전이 최신으로 업데이트 가능하다.
+
+npm info 패키지이름 : 패키지정보확인
+npm install 패키지이름@버전 : 원하는 버전으로 설치
+npm update 패키지이름 : 최신버전 패키지로 업데이트
+package.json에 패키지 버전에 ^(케롯)이 없다면 메이저기준 업데이트가 되질 않는다.
+
+
+~(틸드) major, minor를 건들지 않고 patch 버전만 최신버전으로 업데이트
+통상적으로는 ^(케롯)으로 사용한다. 특정한 조건에서만 ~(틸드)를 사용한다.
