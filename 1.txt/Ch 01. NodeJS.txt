@@ -11,6 +11,7 @@ devDependencies : 개발의존성
 
 터미널 claer (윈도우) 터미널 지우기
 
+
 parcel 번들러
 package.json에 등록한 scripts 명령어를 실행시켜야 parcel이 작동.
 실행 명령은 npm run 명령어
@@ -20,7 +21,7 @@ npm 명령에 따라 개발용 배포용으로 실행가능
 - parcel build ./경로 - 배포용 (난독화되어있음) (최종제품용)
 
 
-유의적 버전
+5. 유의적 버전
 4.17.21 = major.minor.patch
 major = 기존버전과 호환 안됨. 새로운 버전 (ex.3버전과 호환 X)
 minor = 기존버전과 호환 가능. 기능이 추가된 버전 (ex. 16버전화 호환)
