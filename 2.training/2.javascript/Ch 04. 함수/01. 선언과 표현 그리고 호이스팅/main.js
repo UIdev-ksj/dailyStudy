@@ -7,13 +7,13 @@ function hello() {
 }
 
 // 아래와 같이 함수선언문에서 표현식으로 변경하게되면 호이스팅이 작동되지 않는다. 
-// hello2()
-// const world = function hello2() {
-//     console.log('Hello~')
-// }
+hello2()
+const world = function hello2() {
+    console.log('Hello~')
+}
 
 //함수 표현식에선 오류
-// hello()
-// const hello = function () {
-//     console.log('Hello~')
-// }
+hello3()
+const hello3 = function () {
+    console.log('Hello~')
+}
