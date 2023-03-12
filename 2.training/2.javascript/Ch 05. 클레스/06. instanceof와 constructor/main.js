@@ -1,19 +1,40 @@
-console.log('챕터1')
-//호이스팅
-//함수 선언문에서는 정상 작동
-hello()
-function hello() {
-    console.log('Hello~')
+class A {
+    constructor() {}
+}
+class B extends A {
+    constructor() {
+        super()
+    }
+}
+class C extends B {
+    constructor() {
+        super()
+    }
 }
 
-// 아래와 같이 함수선언문에서 표현식으로 변경하게되면 호이스팅이 작동되지 않는다. 
-// hello2()
-// const world = function hello2() {
-//     console.log('Hello~')
-// }
+const a = new A()
+const b = new B()
+const c = new C()
 
-//함수 표현식에선 오류
-// hello()
-// const hello = function () {
-//     console.log('Hello~')
-// }
+console.log(a instanceof A) // true
+console.log(a instanceof B) // false
+console.log(a instanceof C) // false
+
+console.log(b instanceof A) // true
+console.log(b instanceof B) // true
+console.log(b instanceof C) // false
+
+console.log(c instanceof A) // true
+console.log(c instanceof B) // true
+console.log(c instanceof C) // true
+
+console.log(c.constructor === A) // false  c의 constructor와 A의 constructor 비교한다.
+console.log(c.constructor === B) // false
+console.log(c.constructor === C) // true
+
+const fruits = ['Apple', 'Banana']
+// new 방식보다는 위의 리터럴 방식이 더 편하고 많이 쓰인다.
+// const fruits = new Array('Apple', 'Banana')
+
+console.log(fruits.constructor === Array)  // true
+console.log(fruits instanceof Array) // true
